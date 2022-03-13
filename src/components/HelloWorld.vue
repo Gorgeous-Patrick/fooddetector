@@ -10,17 +10,25 @@
         />
       </v-col>
 
-      <v-col class="mb-4">
+      <v-col class="mb-4" cols="12">
         <h1 class="display-2 font-weight-bold mb-3">JI Dorm Book</h1>
       </v-col>
-
-
-      <v-col cols = '12'>
-        <h3>
-          早餐 Breakfast
-        </h3>
+      <v-col cols="11" sm="4">
+      <v-text-field label="姓名 Name" outlined></v-text-field>
       </v-col>
-      <v-col cols="7" class="mb-5">
+      <v-col cols="11" sm="4">
+      <v-text-field label="宿舍楼 Building" outlined></v-text-field>
+      </v-col>
+      <v-col cols="11" sm="4">
+      <v-text-field label="寝室号 Room" outlined></v-text-field>
+      </v-col>
+
+      
+
+      <v-col cols="12">
+        <h3>早餐 Breakfast</h3>
+      </v-col>
+      <v-col cols="11" sm="7" class="mb-5">
         <v-select
           v-model="selectBreakfast"
           :items="items"
@@ -32,12 +40,10 @@
           single-line
         ></v-select>
       </v-col>
-      <v-col cols = '12'>
-        <h3>
-          中餐 Lunch
-        </h3>
+      <v-col cols="12">
+        <h3>中餐 Lunch</h3>
       </v-col>
-      <v-col cols="7" class="mb-5">
+      <v-col cols="11" sm="7" class="mb-5">
         <v-select
           v-model="selectLunch"
           :items="items"
@@ -49,12 +55,10 @@
           single-line
         ></v-select>
       </v-col>
-      <v-col cols = '12'>
-        <h3>
-          晚餐 Dinner
-        </h3>
+      <v-col cols="12">
+        <h3>晚餐 Dinner</h3>
       </v-col>
-      <v-col cols="7" class="mb-5">
+      <v-col cols="11" sm="7" class="mb-5">
         <v-select
           v-model="selectDinner"
           :items="items"
@@ -66,10 +70,8 @@
           single-line
         ></v-select>
       </v-col>
-      <v-col cols="7" class="mb-5">
-        <v-btn elevation="2"
-         color="primary"
-         @click="submit">提交 Submit</v-btn>
+      <v-col cols="11" sm="7" class="mb-5">
+        <v-btn elevation="2" color="primary" @click="submit">提交 Submit</v-btn>
       </v-col>
     </v-row>
   </v-container>
@@ -93,9 +95,9 @@ export default {
   }),
   methods: {
     submit() {
-      console.log(this.selectBreakfast.abbr)
-      return
-    }
-  }
+      console.log(this.selectBreakfast.abbr);
+      return;
+    },
+  },
 };
 </script>
